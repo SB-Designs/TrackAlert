@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TfL Disruptions</title>
+    <meta name="theme-color" content="#003688" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Favicon link -->
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/8357f303-720f-4e93-ab5a-fafe557be39c/Underground%20Roundel.ico?v=1697160561957"
+      type="image/x-icon"
+    />
+
+    <!-- Link to London Tube font -->
+    <link href="https://fonts.cdnfonts.com/css/london-tube" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>TfL Disruptions</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="disruptions.html">Disruptions</a></li>
+          <li><a href="arrivals.html">Arrivals</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="disruptions">
+      <h2>Real-time TfL Disruptions</h2>
+      <div id="status-container"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Powered by
+        <a href="https://api.tfl.gov.uk/" target="_blank">TfL Open Data</a>
+      </p>
+      <p>
+        TrackAlert™️ &copy; SB Designs 2024. Designed by
+        <a href="https://sbdesigns.netlify.app">SB Designs.</a>
+      </p>
+    </footer>
+
+    <!-- Modal Popup Structure -->
+    <div id="reasonModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="reasonText">Reason goes here...</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

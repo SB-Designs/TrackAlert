@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TfL Arrivals</title>
+    <meta name="theme-color" content="#003688" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Favicon and font -->
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/8357f303-720f-4e93-ab5a-fafe557be39c/Underground%20Roundel.ico?v=1697160561957"
+      type="image/x-icon"
+    />
+    <link href="https://fonts.cdnfonts.com/css/london-tube" rel="stylesheet" />
+
+    <!-- Banner -->
+    <style>
+      .alert-banner {
+        background-color: yellow;
+        color: black;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px; /* Adjust spacing below the banner */
+        border: 1px solid #ccc; /* Optional: add a border for better visibility */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>TfL Arrivals</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="disruptions.html">Disruptions</a></li>
+          <li><a href="arrivals.html">Arrivals</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="arrivals-section">
+      <h2>Real-time TfL Arrivals</h2>
+
+      <!-- Dropdown for line selection -->
+      <div>
+        <label for="line-select">Select Line:</label>
+        <select id="line-select">
+          <option value="bakerloo">Bakerloo</option>
+          <option value="central">Central</option>
+          <option value="circle">Circle</option>
+          <option value="district">District</option>
+          <option value="hammersmithcity">Hammersmith & City</option>
+          <option value="jubilee">Jubilee</option>
+          <option value="metropolitan">Metropolitan</option>
+          <option value="northern">Northern</option>
+          <option value="piccadilly">Piccadilly</option>
+          <option value="victoria">Victoria</option>
+          <option value="waterlooandcity">Waterloo & City</option>
+          <option value="overground">London Overground</option>
+          <option value="elizabeth">Elizabeth Line</option>
+          <option value="dlr">DLR</option>
+          <option value="tram">London Trams</option>
+        </select>
+
+        <label for="station-select">Filter by Station:</label>
+        <select id="station-select">
+          <option value="all">All Stations</option>
+          <!-- Station options will be populated here -->
+        </select>
+        <button id="filter-button">Filter</button>
+      </div>
+
+      <table id="arrivals-table">
+        <thead>
+          <tr>
+            <th>Station</th>
+            <th>Destination</th>
+            <th>Expected Arrival</th>
+            <th>Platform</th>
+          </tr>
+        </thead>
+        <tbody id="arrivals-tbody">
+          <!-- Train and Tram arrival data will be inserted here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Powered by
+        <a href="https://api.tfl.gov.uk/" target="_blank">TfL Open Data</a>
+      </p>
+      <p>
+        TrackAlert™️ &copy; SB Designs 2024. Designed by
+        <a href="https://sbdesigns.netlify.app">SB Designs.</a>
+      </p>
+    </footer>
+
+    <script src="arrivals.js"></script>
+  </body>
+</html>
